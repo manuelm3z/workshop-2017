@@ -1,0 +1,43 @@
+{
+  "name": "table-react",
+  "version": "0.0.1",
+  "description": "Una tabla hecha en react que usa bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/manuelm3z/workshop-2017.git"
+  },
+  "author": "Manuel Zambrano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manuelm3z/workshop-2017/issues"
+  },
+  "homepage": "https://github.com/manuelm3z/workshop-2017#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
+    "file-loader": "^0.10.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.2",
+    "node-sass": "^4.5.1",
+    "postcss": "^5.2.16",
+    "postcss-loader": "^1.3.3",
+    "sass": "^0.5.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.0",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
