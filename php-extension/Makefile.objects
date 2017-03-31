@@ -1,0 +1,10 @@
+vehicles.lo: /home/visionstudio/proyectos/workshop-2017/php-extension/vehicles.cc
+	$(LIBTOOL) --mode=compile $(CXX)  -I. -I/home/visionstudio/proyectos/workshop-2017/php-extension $(COMMON_FLAGS) $(CXXFLAGS_CLEAN) $(EXTRA_CXXFLAGS)  -c /home/visionstudio/proyectos/workshop-2017/php-extension/vehicles.cc -o vehicles.lo 
+car.lo: /home/visionstudio/proyectos/workshop-2017/php-extension/car.cc
+	$(LIBTOOL) --mode=compile $(CXX)  -I. -I/home/visionstudio/proyectos/workshop-2017/php-extension $(COMMON_FLAGS) $(CXXFLAGS_CLEAN) $(EXTRA_CXXFLAGS)  -c /home/visionstudio/proyectos/workshop-2017/php-extension/car.cc -o car.lo 
+$(phplibdir)/vehicles.la: ./vehicles.la
+	$(LIBTOOL) --mode=install cp ./vehicles.la $(phplibdir)
+
+./vehicles.la: $(shared_objects_vehicles) $(VEHICLES_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_vehicles) $(VEHICLES_SHARED_LIBADD)
+
