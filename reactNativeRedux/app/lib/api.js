@@ -10,7 +10,7 @@ class Api {
 	}
 
 	static get(route) {
-		return this.xhk(route, null, 'GET');
+		return this.xhr(route, null, 'GET');
 	}
 
 	static put(route, params) {
@@ -26,7 +26,7 @@ class Api {
 	}
 
 	static xhr(route, params, verb) {
-		const hosst = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com';
+		const host = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com';
 
 		const url = `${host}${route}`;
 
@@ -38,7 +38,7 @@ class Api {
 
 		options.headers = Api.headers();
 
-		return fecth(url, options)
+		return fetch(url, options)
 			.then(response => {
 				let json = response.json();
 

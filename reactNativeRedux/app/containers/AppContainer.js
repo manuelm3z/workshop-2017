@@ -2,12 +2,6 @@ import React, {
 	Component
 } from 'react';
 import {
-	StyleSheet,
-	View,
-	Text,
-	TouchableHighlight
-} from 'react-native';
-import {
 	connect
 } from 'react-redux';
 import {
@@ -16,6 +10,7 @@ import {
 import {
 	ActionCreators
 } from '../actions';
+import HomeContainer from './HomeContainer';
 
 class AppContainer extends Component {
 	addRecipe() {
@@ -24,21 +19,10 @@ class AppContainer extends Component {
 
 	render() {
 		return (
-			<View>
-				<Text style={styles.text}>I am App Container! Recipe Count: {this.props.recipeCount}</Text>
-				<TouchableHighlight onPress={() => {this.addRecipe()}}>
-					<Text>Add recipe</Text>
-				</TouchableHighlight>
-			</View>
+			<HomeContainer {...this.props}/>
 		);
 	}	
 }
-
-const styles = StyleSheet.create({
-	text: {
-		marginTop: 20
-	}
-});
 
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators(ActionCreators, dispatch);
